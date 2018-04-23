@@ -11,7 +11,7 @@ mvn package'''
 
       }
     }
-    stage('') {
+    stage('finished message') {
       steps {
         echo 'Finished!'
       }
