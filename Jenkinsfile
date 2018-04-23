@@ -8,6 +8,12 @@ pipeline {
 
 mvn package'''
         }
+
+      }
+    }
+    stage('') {
+      steps {
+        echo 'Finished!'
       }
     }
   }
