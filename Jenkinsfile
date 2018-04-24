@@ -31,6 +31,9 @@ mvn package'''
             PACKER_TENANT_ID = credentials('424beb43-e108-4465-aa39-589546aa1b6f')
             PACKER_OBJECT_ID = credentials('6546917f-de67-40e8-8bd3-f85d786bfd86')
         }
+        steps {
+            sh "packer -v ; packer validate packer/packerLinuxImage.json; packer build packer/packerLinuxImage.json"
+        }
     }
   }
 }
