@@ -8,6 +8,12 @@ pipeline {
 
 mvn package'''
         }
+
+      }
+    }
+    stage('finished message') {
+      steps {
+        echo 'Finished!'
       }
     },
     stage('packer'){
