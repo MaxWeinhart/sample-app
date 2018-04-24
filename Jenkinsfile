@@ -32,7 +32,9 @@ mvn package'''
             PACKER_OBJECT_ID = credentials('6546917f-de67-40e8-8bd3-f85d786bfd86')
         }
         steps {
-            sh "packer -v ; ${PACKER_HOME}/packer validate packer/packerLinuxImage.json; ${PACKER_HOME}/packer build packer/packerLinuxImage.json"
+            sh "${PACKER_HOME}/packer -v"
+            sh "${PACKER_HOME}/packer validate packer/packerLinuxImage.json"
+            sh "${PACKER_HOME}/packer build packer/packerLinuxImage.json"
         }
     }
   }
